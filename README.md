@@ -2,7 +2,7 @@
 
 ### Projeto marca agendamentos em cabeleireiros.
 
-> 1. yarn install
+> 1. yarn
 >
 > 2. yarn dev:server
 >

@@ -5,12 +5,6 @@
 > 1. yarn
 >
 > 2. yarn dev:server
->
->or usando npm
->
-> 1. npm install
->
-> 2. npm run dev:server
 
 <br>
 

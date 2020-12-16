@@ -1,6 +1,3 @@
-import path from 'path';
-import fs from 'fs';
-import uploadConfig from '@config/upload';
 import { injectable, inject } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';
@@ -31,11 +28,11 @@ class UpdateUserAvatarService {
       throw new AppError('Only authenticated users can change avatar.', 401);
     }
 
-    // Deletar avatar anterior
     if (user.avatar) {
       await this.storageProvider.deleteFile(user.avatar);
     }
 
+    console.log(avatarFilename);
     const filename = await this.storageProvider.saveFile(avatarFilename);
 
     user.avatar = filename;
